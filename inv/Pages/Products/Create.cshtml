@@ -1,0 +1,59 @@
+﻿@page
+@model inv.Pages.Products.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="product.Name" class="control-label"></label>
+                <input asp-for="product.Name" class="form-control" />
+                <span asp-validation-for="product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="product.day_received" class="control-label"></label>
+                <input asp-for="product.day_received" class="form-control" />
+                <span asp-validation-for="product.day_received" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="product.Hardware" class="control-label"></label>
+                <input asp-for="product.Hardware" class="form-control" />
+                <span asp-validation-for="product.Hardware" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="product.serial_number" class="control-label"></label>
+                <input asp-for="product.serial_number" class="form-control" />
+                <span asp-validation-for="product.serial_number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="product.state" class="control-label"></label>
+                <input asp-for="product.state" class="form-control" />
+                <span asp-validation-for="product.state" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="product.contract" /> @Html.DisplayNameFor(model => model.product.contract)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

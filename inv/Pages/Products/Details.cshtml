@@ -1,0 +1,55 @@
+﻿@page
+@model inv.Pages.Products.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.product.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.product.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.product.day_received)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.product.day_received)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.product.Hardware)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.product.Hardware)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.product.serial_number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.product.serial_number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.product.state)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.product.state)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.product.contract)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.product.contract)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.product.ID" class="btn btn-success">Edit</a> |
+    <a asp-page="./Index"class="btn btn-info">Back to List</a>
+</div>
